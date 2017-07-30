@@ -1,0 +1,77 @@
+package com.bookbazaar.dao;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.bookbazaar.model.Cart;
+import com.bookbazaar.model.Category;
+
+@Repository
+public class CartDAO 
+{
+	/*@Autowired
+	private SessionFactory sessionFactory;
+	
+	public Session getSession()
+	{
+		return sessionFactory.openSession();
+	} 
+	
+	public List<Cart> getAllCartData()
+	{
+		Session sess=getSession();
+		Query q=sess.createQuery("from Cart");
+		List<Cart> l=q.list();
+		return l;
+		
+	}
+	
+	public Cart getCartById(String cartname)
+	{
+		Session sess=getSession();
+		Cart cart=(Cart)sess.get(Cart.class, cartname);
+	    return cart;
+	        
+	}
+	*/
+	
+	public void saveCart(Cart cart)
+	{
+		Session sess=getSession();
+		Transaction tx=sess.beginTransaction();
+		sess.save(cart);
+		tx.commit();
+		sess.close();
+		
+	}
+	
+	/*
+	public void deleteCart(Cart cart)
+	{
+		Session sess=getSession();
+		Transaction tx=sess.beginTransaction();
+		sess.delete(cart);
+		tx.commit();
+		sess.close();
+		
+	}
+	
+	/*public void updateCart(Cart cart)
+	{
+		Session sess=getSession();
+		Transaction tx=sess.beginTransaction();
+		sess.update(cart);
+		tx.commit();
+		sess.close();
+		
+	}
+	
+
+*/
+}
