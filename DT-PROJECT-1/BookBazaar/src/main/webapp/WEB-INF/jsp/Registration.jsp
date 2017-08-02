@@ -8,69 +8,96 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    <c:url value="/resources/pics" var="z"/>
     <title> Registration Form</title>
     <style>
-body{
-    background:url('http://www.wallpaperup.com/uploads/wallpapers/2012/10/21/20181/cad2441dd3252cf53f12154412286ba0.jpg');
-    padding:50px;
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
 }
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+
 </style>
     </head>
-    <body>
+    <body background="${z}/b1.jpg">
     <jsp:include page="Header.jsp"></jsp:include>
- 
-    <h1> Register Here</h1>
     <form action="userregistration" method="post">
-    <form class="form-horizontal" action='' method="POST">
-  <fieldset>
-    <div id="legend">
-      <legend class="">Register</legend>
-    </div>
-    <div class="control-group">
-      <!-- Username -->
-      <label class="control-label"  for="username">Username</label>
-      <div class="controls">
-        <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
-        <p class="help-block">Username can contain any letters or numbers, without spaces</p>
-      </div>
-    </div>
- 
-    <div class="control-group">
-      <!-- E-mail -->
-      <label class="control-label" for="email">E-mail</label>
-      <div class="controls">
-        <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
-        <p class="help-block">Please provide your E-mail</p>
-      </div>
-    </div>
- 
-    <div class="control-group">
-      <!-- Password-->
-      <label class="control-label" for="password">Password</label>
-      <div class="controls">
-        <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
-        <p class="help-block">Password should be at least 4 characters</p>
-      </div>
-    </div>
- 
-    <div class="control-group">
-      <!-- Password -->
-      <label class="control-label"  for="password_confirm">Password (Confirm)</label>
-      <div class="controls">
-        <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
-        <p class="help-block">Please confirm password</p>
-      </div>
-    </div>
- 
-    <div class="control-group">
-      <!-- Button -->
-      <div class="controls">
-        <button class="btn btn-success">Register</button>
-      </div>
-    </div>
-  </fieldset>
+     
+    <div class="background">
+  <div class="transbox">
+  
+    <section class="container">
+		<div class="container-page">				
+			<div class="col-md-6">
+				<h1 class="dark-grey"><b>Register Here ... !!! </b></h1>
+				</br>
+				</br>
+				<b>
+				<div class="form-group col-lg-10">
+					<label>Username</label>
+					<input type="text" id="username" name="username" class="form-control" >
+				</div>
+				
+				<div class="form-group col-lg-8">
+					<label>Password</label>
+					<input type="password" id="password" name="password" class="form-control" >
+				</div>
+				
+								
+				<div class="form-group col-lg-8">
+					<label>Email Address</label>
+					<input type="text" id="email" name="email" class="form-control" >
+				</div>
+				
+				
+				<div class="col-sm-8">
+					<input type="checkbox" class="checkbox" />I Accept to Agree All The Terms and Conditions of BookBazaar
+				</div>
+
+				
+			</div>
+		
+			<div class="col-md-6">
+				<h2 class="dark-grey"><b>Terms and Conditions</b></h2>
+				<p>
+					By clicking on "Register" you agree to The BookBazaar's' Terms and Conditions
+				</p>
+				<p>
+					While rare, prices are subject to change based on exchange rate fluctuations - 
+					should such a fluctuation happen, we may request an additional payment. You have the option to request a full refund or to pay the new price. 
+				</p>
+				<p>
+					Should there be an error in the description or pricing of a product, we will provide you with a full refund 
+				</p>
+				<p>
+					Acceptance of an order by us is dependent on our suppliers ability to provide the product. 
+				</p>
+				
+				</br>
+				</br>
+				
+			</div>
+			<center><button type="submit" class="btn btn-success"><h4>Register</h4></button></center>
+		</br>
+				</br>
+				</div>
+	</section>
+</div>
+  </div>
+  </div>
+  </b>
 </form>
-    			</form>
+
+    			
     			<jsp:include page="footer.jsp"></jsp:include>
     </body>
     </html>

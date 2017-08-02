@@ -61,6 +61,7 @@ public class HomeController
 	public ModelAndView registeruser(@ModelAttribute User user)
 	{
 		user.setRole("ROLE_USER");
+		user.setEnabled(true);
 		userDAO.saveUser(user);
 		return new ModelAndView("success");
 	}
@@ -87,17 +88,7 @@ public class HomeController
 			return new ModelAndView("error");
 		}
 	}
-		@RequestMapping("/logout1")
-		public ModelAndView logout(HttpServletRequest request)
-		{
-			System.out.println("logout succesfull");
-			ModelAndView m = new ModelAndView("index");
-			HttpSession session=request.getSession(false);
-			session.setAttribute("username", "");
-			session.invalidate();
-			
-			return m;
-		}
+		
 
 
 }

@@ -78,7 +78,7 @@ public class ProductController {
 		arr=product.getFile().getBytes();
 		productDAO.saveProduct(product);
 		System.out.println("Insert product:"+product);
-		String path="E:/DT-PROJECT-1/BookBazaar/src/main/webapp/resources/pics"+product.getProductid()+".jpg";
+		String path="E:/DT-PROJECT-1/BookBazaar/src/main/webapp/resources/pics/"+product.getProductid()+".jpg";
 		File f=new File(path);
 		BufferedOutputStream bf=new BufferedOutputStream(new FileOutputStream(f));
 		bf.write(arr);

@@ -9,15 +9,11 @@ import org.springframework.stereotype.Component;
 import com.bookbazaar.dao.OrdersDAO;
 
 
-@Component
+@Component("orderFlow")
 public class OrderFlow {
 	
 	@Autowired
      OrdersDAO ordersDAO;
-
-	public  Orders initFlow(){
-		return new Orders();
-	}
 	
 	public String addShippingAddress(Orders orders,ShippingAddress shippingAddress)
 	{

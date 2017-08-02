@@ -76,7 +76,7 @@ public class CartController {
 	{
 		Cart cart=cartDAO.getCart(cart_id);
 		cartDAO.deleteCart(cart);
-		return new ModelAndView("redirect:/viewcart");
+		return new ModelAndView("redirect:/viewCart");
 	}
 	
 	

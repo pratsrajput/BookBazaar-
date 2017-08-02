@@ -61,5 +61,8 @@ public class Orders implements Serializable {
 		return sa.getPincode()+"\n"+sa.getName()+"\n"+sa.getAddress()+"\n"+sa.getLocality()+"\n"+sa.getCity()+"\n"+sa.getState()+"\n"+sa.getContact();
 	}
 	
-	
+	public  Orders initFlow(){
+		System.out.println("called");
+		return new Orders();
+	}
 }

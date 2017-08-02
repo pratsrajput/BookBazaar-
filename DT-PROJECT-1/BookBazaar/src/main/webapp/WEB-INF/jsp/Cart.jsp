@@ -29,7 +29,7 @@
 <td>{{x.productprice | currency:'Rs.'}}</td>
 <td>{{x.quantity}}</td>
 <td>{{x.price*x.quantity | currency:'Rs.'}}</td>
-<td><a href="/BookBazaar/deleteCart/{{x.productid}}"><i class="material-icons" style="color:purple">delete</i></a></td>
+<td><a href="/BookBazaar/deletecart/{{x.cart_id}}"><i class="material-icons" style="color:purple">delete</i></a></td>
 
 </tr>
 </table>

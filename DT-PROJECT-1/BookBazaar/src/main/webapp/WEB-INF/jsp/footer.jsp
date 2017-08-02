@@ -10,11 +10,8 @@
 <title>Footer</title>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
  <c:url value="/resources/css" var="y"/>
-   <link href="${y}/footer.css"/>
-   
-   
-   <!-------------CSS START HERE -------------------------------- -->
-   
+ 
+ <!--------------------CSS codes start here ------------->
    <style>
 footer {
       background-color: #f2f2f2;
@@ -24,22 +21,22 @@ footer {
 .footer h3 {
 	border-bottom: 1px solid #BAC1C8;
 	color: #54697E;
-	font-size: 18px;
+	font-size: 15px;
 	font-weight: 600;
 	line-height: 27px;
-	padding: 10px 0 1px;
+	padding: 1px 0 1px;
 	text-transform: uppercase;
 }
 .footer ul {
 	font-size: 17px;
 	list-style-type: none;
-	margin-left: 0;
+	margin-left: 10;
 	padding-left: 0;
 	margin-top: 15px;
 	color: #7F8C8D;
 }
 .footer ul li a {
-	padding: 0 0 5px 0;
+	padding: 0 0 10px 0;
 	display: block;
 }
 .footer a {
@@ -59,7 +56,7 @@ footer {
 	height: 50px;
 	line-height: 36px;
 	margin: 70px 8px 0 0;
-	padding: 0px;
+	padding: 10px;
 	text-align: center;
 	width: 50px;
 	
@@ -71,7 +68,7 @@ footer {
 
 .social li a i {
 	font-size: 30px;
-	margin: 0 0 0 5px;
+	margin: 10 10 10 5px;
 	color: #EDEFF1 !important;
 }
 
@@ -90,15 +87,15 @@ footer {
 <div class="col-lg-2  col-md-2 col-sm-5 col-xs-6">
 <h3> Get to Know Us </h3>
 <ul>
-<li> <a href="#"> Contact Us </a> </li>
-<li> <a href="#"> About Us </a> </li>
+<li> <a href="Contact"> Contact Us </a> </li>
+<li> <a href="AboutUs"> About Us </a> </li>
 </ul>
 </div>
 <div class="col-lg-2  col-md-2 col-sm-5 col-xs-6">
 <h3> Contact Us </h3>
 <ul>
-<li><a href="#"><span class="glyphicon glyphicon-iphone"></span>+91-8860236013</a></li>
-<li> <a href="#"><span class="glyphicon glyphicon-envelope"></span>support@bookbazar.com </a> </li>
+<li><a href="Contact"><span class="glyphicon glyphicon-iphone"></span>(+8801)7123456</a></li>
+<li> <a href="Contact"><span class="glyphicon glyphicon-envelope"></span>support@bookbazar.com </a> </li>
 </ul>
 </div>
 <div class="col-lg-2  col-md-2 col-sm-5 col-xs-6">

@@ -9,26 +9,14 @@
    	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <meta name="description" content="">
     <meta name="author" content="">
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    <c:url value="/resources/pics" var="z"/>
     <style>
-body{
-    background:url('http://www.wallpaperup.com/uploads/wallpapers/2012/10/21/20181/cad2441dd3252cf53f12154412286ba0.jpg');
-    padding:50px;
-}
-section#contact {
-    background-color: #222222;
-    background-image: url('http://artdnaswitchbd.com/componants/images/map-image.png');
-    background-position: center;
-    background-repeat: no-repeat;
-}
+
 section {
     padding: 30px 0PX;
 }
-section#contact .section-heading {
-    color: white;
-}
-section#contact .form-group {
-    margin-bottom: 25px;
-}
+
 section#contact .form-group input,
 section#contact .form-group textarea {
     padding: 20px;
@@ -43,38 +31,15 @@ section#contact .form-control:focus {
     border-color: #fed136;
     box-shadow: none;
 }
-section#contact ::-webkit-input-placeholder {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #eeeeee;
-}
-.gellary_bg_none img{
-	width: 100%;
-	height: 250px;
-}
-section#contact :-moz-placeholder {
-    /* Firefox 18- */
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #eeeeee;
-}
-section#contact ::-moz-placeholder {
-    /* Firefox 19+ */
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #eeeeee;
-}
+
 section#contact :-ms-input-placeholder {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
-    color: #eeeeee;
+    color: black;
 }
 section#contact .text-danger {
-    color: #e74c3c;
+    color: black;
 }
 
 .about_our_company{
@@ -89,25 +54,9 @@ section#contact .text-danger {
     border-top: 4px double #F99700;
     margin: 20px auto 20px;
 }
-.titleline-icon:after {
-    position: absolute;
-    top: -11px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    font-family: 'FontAwesome';
-    content: "\f141";
-    font-size: 20px;
-    line-height: 1;
-    color: #F99700;
-    text-align: center;
-    vertical-align: middle;
-    width: 40px;
-    height: 20px;
-    background: #ffffff;
-}
 
 </style>
+<body background="${z}/contact.jpg">
 <jsp:include page="Header.jsp"></jsp:include>
 
 	<section id="contact" style="">
@@ -116,7 +65,7 @@ section#contact .text-danger {
                     <div class="about_our_company" style="margin-bottom: 20px;">
                         <h1 style="color:#fff;">Write Your Message</h1>
                         <div class="titleline-icon"></div>
-                        <p style="color:#fff;">Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                        <h4 style="color:#fff;">BookBazaar Fellas!!! Give Your Feedback Here </h4>
                     </div>
                 </div>
                 <div class="row">
@@ -154,16 +103,17 @@ section#contact .text-danger {
                     <div class="col-md-4">
                         <p style="color:#fff;">
                             <strong><i class="fa fa-map-marker"></i> Address</strong><br>
-                            1216/Mirpur_10 Beach, Dhaka(Bangladesh)
+                            Book Bazar,Ardee City, Sector 52,Gurgaon,Haryana - 122011,India
                         </p>
                         <p style="color:#fff;"><strong><i class="fa fa-phone"></i> Phone Number</strong><br>
                             (+8801)7123456</p>
                         <p style="color:#fff;">
                             <strong><i class="fa fa-envelope"></i>  Email Address</strong><br>
-                            Email@info.com</p>
+                            support@bookbazar.com</p>
                         <p></p>
                     </div>
                 </div>
             </div>
         </section>
         <jsp:include page="footer.jsp"></jsp:include>
+        </body>

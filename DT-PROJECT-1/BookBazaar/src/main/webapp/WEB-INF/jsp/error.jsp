@@ -15,7 +15,7 @@ body{
 <body>
 <jsp:include page="Header.jsp"></jsp:include>
 
-ERROR WHILE REGISTRATION!!!!
+ERROR WHILE Login!!!!
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

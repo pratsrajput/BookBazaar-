@@ -6,19 +6,15 @@
 
       <var name="shippingAddress" class="com.bookbazaar.model.ShippingAddress"/>
        <var name="payment" class="com.bookbazaar.model.Payment"/>
-        <var name="orders" class="com.bookbazaar.model.Orders"/>
+        <var name="orders" class="com.bookbazaar.model.Orders"/>    
      
-     <on-start>
-     	  <evaluate expression="orderFlow.initFlow()" result="flowScope.orders"/>
-	</on-start>
-	
-     
+    
     <view-state id="start" view="Address.jsp" model="shippingAddress">
 		 <transition on="event1" to="shippingDetails" />
 	</view-state>
 	
 	<action-state id="shippingDetails">
-	<evaluate expression="orderFlow.addShippingAddress(flowScope.orders,shippingAddress)"></evaluate>
+	<evaluate expression="orderFlow.addShippingAddress(orders,shippingAddress)"></evaluate>
 	<transition on="success" to="viewPaymentPage"></transition>
 	</action-state>
 	
@@ -27,7 +23,7 @@
 	</view-state>
 	
 	<action-state id="orderconfirm">
-	<evaluate expression="orderFlow.addPaymentMethod(flowScope.orders,payment)"></evaluate>
+	<evaluate expression="orderFlow.addPaymentMethod(orders,payment)"></evaluate>
 	<transition on="success" to="orderconfirmation"></transition>
 	</action-state>
 	
@@ -35,7 +31,7 @@
 		 <transition on="event3" to="thanks" />
 	</view-state>
 	<action-state id="thanks">
-	<evaluate expression="orderFlow.addOrder(flowScope.orders)"></evaluate>
+	<evaluate expression="orderFlow.addOrder(orders)"></evaluate>
 	<transition on="success" to="thankspage"></transition>
 	</action-state>
 	

@@ -11,29 +11,22 @@
   <c:url value="/resources/pics" var="z"/>
    <c:url value="/resources/css" var="y"/>
    <link href="${y}/footer.css"/>
-   <style>
-body{
-    background:url('http://www.wallpaperup.com/uploads/wallpapers/2012/10/21/20181/cad2441dd3252cf53f12154412286ba0.jpg');
-    padding:50px;
-}
-</style>
+   
   <style>
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img 
 { width: 70%;margin: auto;
-  }
-
-  
-   
-    
+   }
+         
+     
   </style>
 </head>
-<body>
+<body background="${z}/b3.gif">
 <jsp:include page="Header.jsp"></jsp:include>
 <!----------------------------- div for Carousel --------------------------------------->
 
-  <div class="container-fluid" style="padding-top:0px" >
+  <div class="container-fluid" style="margin-top:-150px" > </div>
   <br>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -85,29 +78,17 @@ body{
   <div class="row">
     <div class="col-sm-4">
       <div class="panel panel-primary">
-        <%-- <div class="panel-body"><img src="${z}/c1.jpg" class="img-responsive"  style="height:300px;width:100%" alt="Image"></div> --%>
-        <div class="panel-footer">Harry Potter And The Sorcers Of Stone</div>
-      
-      <div class="panel-body"><a href="productdetail" target="_blank">
-<img src="${z}/c1.jpg" style="border:1px solid black;max-width:100%;" alt="Photo of Byron Bay, one of Australia's best beaches!">
-</a>
-      
-      
-      
-      
-      
-      </div>
+        <div class="panel-body"><a href="productdetail/{{product.productid}}"><img src="${z}/c1.jpg" class="img-responsive"  style="height:300px;width:100%" alt="Image"></a></div>
+        </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-danger">
-        <div class="panel-body"><img src="${z}/c2.jpg" class="img-responsive" style="height:300px;width:100%" alt="Image"></div>
-        <div class="panel-footer">Albert Einstein (A BIOGRAPHY)</div>
+        <div class="panel-body"><a href="productdetail/{{product.productid}}"><img src="${z}/c2.jpg" class="img-responsive" style="height:300px;width:100%" alt="Image"></a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-success">
-        <div class="panel-body"><img src="${z}/c3.jpg" class="img-responsive" style="height:300px;width:100%" alt="Image"></div>
-        <div class="panel-footer">Captain America (Living Legend)</div>
+        <div class="panel-body"><a href="productdetail/p1"><img src="${z}/p1.jpg" class="img-responsive" style="height:300px;width:100%" alt="Image"></a></div>
       </div>
     </div>
   </div>
@@ -117,20 +98,19 @@ body{
   <div class="row">
     <div class="col-sm-4">
       <div class="panel panel-primary">
-        <div class="panel-body"><img src="${z}/c4.jpg" class="img-responsive" style="height:300px;width:100%" alt="Image"></div>
-        <div class="panel-footer">To Kill A Mocking Bird</div>
+        <div class="panel-body"><a href="productdetail"><img src="${z}/c4.jpg" class="img-responsive" style="height:300px;width:100%" alt="Image"></a></div>
+        
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
-        <div class="panel-body"><img src="${z}/c5.jpg" class="img-responsive" style="height:300px;width:100%" alt="Image"></div>
-        <div class="panel-footer">Sapeins</div>
+        <div class="panel-body"><a href="productdetail"><img src="${z}/c5.jpg" class="img-responsive" style="height:300px;width:100%" alt="Image"></a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
-        <div class="panel-body"><img src="${z}/c6.jpg" class="img-responsive" style="height:300px;width:100%" alt="Image"></div>
-        <div class="panel-footer">Radical Acceptance</div>
+        <div class="panel-body"><a href="productdetail"><img src="${z}/c6.jpg" class="img-responsive" style="height:300px;width:100%" alt="Image"></a></div>
+        
       </div>
     </div>
   </div>
